@@ -1,0 +1,8 @@
+<h1>Hello <%= @user.name %></h1>
+<ul>
+  <% @checkins.each do |checkin| %>
+  <li> <%= checkin.venue.name %> at <%= checkin.created_at %> </li>
+  <% end %>
+</ul>
+
+

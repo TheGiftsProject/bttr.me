@@ -1,0 +1,8 @@
+%h2{:style=>"margin-left:25px;border-bottom:1px solid #eee;"}= timespan
+%ul.missions{:style=>"overflow:hidden;padding:0;margin-left:25px;"}
+  - if missions.empty?
+    %a{:href=>new_mission_path} create a mission 
+  - else
+    - missions.each do |m|
+      %li{:style => "list-style: none;"}
+        != render :partial => "mission_row", :locals => {:mission => m}

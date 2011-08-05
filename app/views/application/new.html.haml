@@ -1,0 +1,13 @@
+!= form_tag create_mission_path,:method=>:post do 
+  .name
+    != label_tag :name
+    != text_field_tag :name
+  .timespan
+    %span Timespan
+    != radio_button_tag :timespan,:day, { :id => "timespan_day" }
+    != label_tag "timespan_day", "Day"
+    != radio_button_tag :timespan,:week, { :id => "timespan_week" }
+    != label_tag "timespan_week", "Week"
+    != radio_button_tag :timespan,:month, { :id => "timespan_month" }
+    != label_tag "timespan_month", "Month"
+

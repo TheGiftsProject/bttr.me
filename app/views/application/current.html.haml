@@ -1,0 +1,3 @@
+- @missions.each do |timespan,missions|
+  != render :partial=>"mission_list",:locals=>{:missions=>missions,:timespan=>timespan}
+
